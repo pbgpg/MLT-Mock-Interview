@@ -4,6 +4,7 @@ library(googlesheets)
 library(ggplot2)
 library(reshape2)
 
+
 # Define UI for application that draws a histogram
 shinyUI(fluidPage(
   shinyjs::useShinyjs(),
@@ -22,7 +23,7 @@ shinyUI(fluidPage(
                "(black dots) displayed are still based on the",
                "full data set. Additionally, if your email is",
                "not found, your scores will not be displayed."),
-      img(src="MLT.png", height = 60.69/1, width = 100/1)
+      img(src="MLT-logo.png", height = 60.69/1, width = 100/1)
    
     ),
     mainPanel(htmlOutput("myid"),

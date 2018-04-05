@@ -1,5 +1,5 @@
 # Get the data.
-myurl <- "https://docs.google.com/spreadsheets/d/12o33U5u6cyZolImtxatQj84PJ-SwiWrej1meWDMKnrE/pub?gid=915553877&single=true&output=csv"
+myurl <- "https://docs.google.com/spreadsheets/d/e/2PACX-1vSV4O64FOQthFtMQGxa9Z6bAjQ-gGG-a26PmiSVVrAKiL5O0aY-z37rwwMejueycckn8U3x9DQfG-If/pub?gid=915553877&single=true&output=csv"
 x <- read.csv(url(myurl), header=TRUE)
 
 # Set up plotting parameters.
@@ -19,6 +19,7 @@ industries <- sort(unique(x$industry))
 # Compute score averages by industry.
 indMeans <- aggregate(x[,vars], list(x$industry), mean, na.rm=T)
 indMeans[,-1] <- round(indMeans[,-1],digits=1)
+
 
 # Define server logic required to make a plot
 shinyServer(
