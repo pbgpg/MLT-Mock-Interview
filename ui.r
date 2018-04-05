@@ -4,9 +4,10 @@ library(googlesheets)
 library(ggplot2)
 library(reshape2)
 
+source('getData.R', echo=TRUE)
 
 # Define UI for application that draws a histogram
-shinyUI(fluidPage(
+fluidPage(
   shinyjs::useShinyjs(),
   # Application title  
   titlePanel(title = "Interview Scores"),
@@ -56,4 +57,4 @@ shinyUI(fluidPage(
                  
     )
   )
-))
+)
